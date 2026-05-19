@@ -24,5 +24,20 @@ int main() {
         cout << entry.first << ' ' << entry.second << endl;
     }
 
+    //M2
+    int maxCount = 0;
+    for (auto entry : airports) {
+        if (entry.second > maxCount) {
+            maxCount = entry.second;
+        }
+    }
+ 
+    cout << "\nBusiest airport(s) with count " << maxCount << ":" << endl;
+    for (auto entry : airports) {
+        if (entry.second == maxCount) {
+            cout << entry.first << " " << entry.second << endl;
+        }
+    }
+
     return 0;
 }
