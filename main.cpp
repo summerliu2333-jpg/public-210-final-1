@@ -1,3 +1,4 @@
+//COMSC-210-5068, Final-1, Yang Liu
 #include <iostream>
 #include <fstream>
 #include <map>
@@ -5,15 +6,7 @@
 
 using namespace std;
 
-//M3
-void print_in_range(map<string, int>& airports, int low, int high) {
-    cout << "Airports with traffic in range [" << low << ", " << high << "]:" << endl;
-    for (auto entry : airports) {
-        if (entry.second >= low && entry.second <= high) {
-            cout << entry.first << " " << entry.second << endl;
-        }
-    }
-}
+void print_in_range(map<string, int>& airports, int low, int high);
 
 int main() {
     //M1
@@ -56,4 +49,14 @@ int main() {
     print_in_range(airports, 9, 12);
 
     return 0;
+}
+
+//M3
+void print_in_range(map<string, int>& airports, int low, int high) {
+    cout << "Airports with traffic in range [" << low << ", " << high << "]:" << endl;
+    for (auto entry : airports) {
+        if (entry.second >= low && entry.second <= high) {
+            cout << entry.first << " " << entry.second << endl;
+        }
+    }
 }
