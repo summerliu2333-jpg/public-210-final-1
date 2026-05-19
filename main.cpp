@@ -5,6 +5,16 @@
 
 using namespace std;
 
+//M3
+void print_in_range(map<string, int>& airports, int low, int high) {
+    cout << "Airports with traffic in range [" << low << ", " << high << "]:" << endl;
+    for (auto entry : airports) {
+        if (entry.second >= low && entry.second <= high) {
+            cout << entry.first << " " << entry.second << endl;
+        }
+    }
+}
+
 int main() {
     //M1
     ifstream infile("210-final-1-SP26.txt");
@@ -38,6 +48,12 @@ int main() {
             cout << entry.first << " " << entry.second << endl;
         }
     }
+
+    //M3
+    cout << endl;
+    print_in_range(airports, 5, 8);
+    cout << endl;
+    print_in_range(airports, 9, 12);
 
     return 0;
 }
